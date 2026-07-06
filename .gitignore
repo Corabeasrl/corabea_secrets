@@ -1,0 +1,11 @@
+# Never commit plaintext or keys
+*.yaml
+*.conf
+*.json
+*.key
+*.pub
+!*.age
+!*.md
+!*.sh
+!.gitignore
+/tmp/
