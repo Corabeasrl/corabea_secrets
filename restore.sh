@@ -25,7 +25,7 @@ for ns in prod test web cert-manager; do
     kubectl get ns "$ns" >/dev/null 2>&1 || kubectl create namespace "$ns"
 done
 
-for f in $(find prod test jitsi web cert-manager -type f -name '*.yaml.age' 2>/dev/null); do
+for f in $(find prod test web cert-manager -type f -name '*.yaml.age' 2>/dev/null); do
     echo "Applying: $f"
     age -d -i "$AGE_KEY" "$f" | kubectl apply -f -
 done
