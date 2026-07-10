@@ -21,7 +21,7 @@ fi
 echo "Using age key: $AGE_KEY"
 echo
 
-for ns in prod test jitsi web cert-manager; do
+for ns in prod test web cert-manager; do
     kubectl get ns "$ns" >/dev/null 2>&1 || kubectl create namespace "$ns"
 done
 
