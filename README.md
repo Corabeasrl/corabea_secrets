@@ -10,7 +10,7 @@ If you can read this repo but you don't have the key, you cannot decrypt anythin
 prod/            Secrets from the `prod` namespace
 test/            Secrets from the `test` namespace
 web/             Secrets from the `web` namespace
-cert-manager/    ACME account key (avoids Let's Encrypt rate limits on restore)
+cert-manager/    ACME account key (avoids Let's Encrypt rate limits on restore) + OVH API creds for the DNS-01 webhook
 infra/           Config that lives outside k8s:
                  - wireguard-<host>.conf  per-node WG configuration
                  - k3s-node-token          needed to join new workers
